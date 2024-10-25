@@ -7,8 +7,8 @@ export default function Page() {
             <Header backTo="/menu" />
             <div className="flex gap-4">
                 <GoTo href="/menu/flora/bernyanyi/" icon="ph:music-notes-fill" text="Bernyanyi"/>
-                <GoTo href="/menu/fauna/bermain" icon="f7:book" text="Bermain"/>
-                <GoTo href="/menu/fauna/quiz" icon="fluent:play-32-filled" text="Quiz"/>
+                <GoTo href="/menu/flora/belajar" icon="f7:book" text="Belajar"/>
+                <GoTo href="/menu/flora/bermain" icon="fluent:play-32-filled" text="Bermain"/>
             </div>
         </div>
     )
