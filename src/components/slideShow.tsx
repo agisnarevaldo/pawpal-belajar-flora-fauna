@@ -1,6 +1,9 @@
 "use client";
 
-import { useState } from "react";
+import {useState} from "react";
+import BtnSlide from "@/components/ui/btnSlide";
+import Image from "next/image";
+import {Icon} from "@iconify/react";
 
 type Item = {
     name: string;
@@ -34,29 +37,24 @@ export default function SlideShow({items, startIndex, onClose}: SlideShowProps) 
     };
 
     return (
-        <div className="fixed inset-0 bg-black bg-opacity-75 z-50 flex items-center justify-center p-8">
-            <div className="relative bg-white p-8 rounded-lg max-w-xl w-full text-center">
-                <button className="absolute top-4 right-4 text-2xl" onClick={onClose}>
-                    &times;
-                </button>
-
-                <img src={items[currentIndex].image} alt={items[currentIndex].name}
-                     className="w-full h-64 object-cover mb-4"/>
-                <h2 className="text-2xl font-bold mb-4">{items[currentIndex].name}</h2>
-                <p className="mb-4">{items[currentIndex].description}</p>
-
-                <button onClick={playDescription} className="px-4 py-2 bg-blue-500 text-white rounded-lg mb-4">
-                    Play Description
-                </button>
-
-                <div className="flex justify-between">
-                    <button onClick={prevSlide} className="px-4 py-2 bg-gray-300 rounded-lg">
-                        Previous
+        <div
+            className="fixed inset-0 bg-black/25 backdrop-blur z-50 flex flex-col gap-8 items-center justify-center p-8 text-[#593316]">
+            <div className="relative p-2 border-4 border-[#1b1b1b] rounded-[65px] max-w-screen-lg w-full text-center">
+                <div className="bg-white/90 p-8 rounded-[55px]">
+                    <button className="absolute top-8 right-8 text-[37px] text-red-600" onClick={onClose}>
+                        <Icon icon="iconamoon:close"/>
                     </button>
-                    <button onClick={nextSlide} className="px-4 py-2 bg-gray-300 rounded-lg">
-                        Next
-                    </button>
+
+                    <Image src={items[currentIndex].image} alt={items[currentIndex].name} width={400} height={400}
+                           className="w-full h-64 mb-4"/>
+                    <h2 className="text-2xl font-bold mb-4">{items[currentIndex].name}</h2>
+                    <p className="mb-4 text-justify font-semibold px-8">{items[currentIndex].description}</p>
                 </div>
+            </div>
+            <div className="flex justify-between gap-14 text-[#5431A5]">
+                <BtnSlide icon="uiw:left" onClick={prevSlide}/>
+                <BtnSlide icon="line-md:play-filled" onClick={playDescription}/>
+                <BtnSlide icon="uiw:right" onClick={nextSlide}/>
             </div>
         </div>
     )
