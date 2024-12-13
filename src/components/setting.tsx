@@ -24,7 +24,7 @@ export default function Setting() {
                 onClick={toggleModal}
                 className="text-white text-4xl"
             >
-                <Icon icon="ic:round-settings" />
+                <Icon icon="si:info-fill" />
             </button>
 
             {isOpen && (
