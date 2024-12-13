@@ -4,8 +4,8 @@ export default function Page() {
     return (
         <>
             <Bernyanyi
-                background="bg-[url('/bg/bgBernyanyi2.png')]"
-                video="https://www.youtube.com/embed/Mv4lv7eKF-E?si=TZ7Vm73XcnuljvEf"
+                background="bg-bernyanyi2"
+                video="https://www.youtube.com/embed/OKAYV5HGZ1w?si=NWCX3BHHnEMhGagD"
                 backTo="/menu/flora"
             />
         </>
