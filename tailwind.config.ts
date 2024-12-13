@@ -20,6 +20,7 @@ const config: Config = {
         'flora-menu': "url('/bg/bgFloraMenu.png')",
         'fauna-menu': "url('/bg/bgFaunaMenu.png')",
         'bernyanyi': "url('/bg/bgBernyanyi.png')",
+        'bernyanyi2': "url('/bg/bgBernyanyi2.png')",
         'jungle': "url('/bg/jungle.png')",
       },
     },
