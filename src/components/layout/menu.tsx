@@ -7,6 +7,7 @@ import Image from "next/image";
 type Item = {
     name: string;
     image: string;
+    image2: string;
     description: string;
 };
 

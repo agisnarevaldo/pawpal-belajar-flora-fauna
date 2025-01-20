@@ -7,7 +7,7 @@ import {Icon} from "@iconify/react";
 
 type Item = {
     name: string;
-    image: string;
+    image2: string;
     description: string;
 }
 
@@ -33,6 +33,7 @@ export default function SlideShow({items, startIndex, onClose}: SlideShowProps) 
     // functon to play the description using SpeechSynthesisUtterance
     const playDescription = () => {
         const utterance = new SpeechSynthesisUtterance(items[currentIndex].description);
+        utterance.lang = "id-ID";
         window.speechSynthesis.speak(utterance);
     };
 
@@ -45,7 +46,7 @@ export default function SlideShow({items, startIndex, onClose}: SlideShowProps) 
                         <Icon icon="iconamoon:close"/>
                     </button>
 
-                    <Image src={items[currentIndex].image} alt={items[currentIndex].name} width={400} height={400}
+                    <Image src={items[currentIndex].image2} alt={items[currentIndex].name} width={400} height={400}
                            className="w-full h-64 mb-4"/>
                     <h2 className="text-2xl font-bold mb-4">{items[currentIndex].name}</h2>
                     <p className="mb-4 text-justify font-semibold px-8">{items[currentIndex].description}</p>
