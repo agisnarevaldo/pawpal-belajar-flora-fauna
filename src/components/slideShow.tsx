@@ -9,6 +9,7 @@ type Item = {
     name: string;
     image2: string;
     description: string;
+    audio: string;
 }
 
 type SlideShowProps = {
@@ -32,9 +33,8 @@ export default function SlideShow({items, startIndex, onClose}: SlideShowProps) 
 
     // functon to play the description using SpeechSynthesisUtterance
     const playDescription = () => {
-        const utterance = new SpeechSynthesisUtterance(items[currentIndex].description);
-        utterance.lang = "id-ID";
-        window.speechSynthesis.speak(utterance);
+        const audio = new Audio(`/audio/${items[currentIndex].audio}.m4a`);
+        audio.play();
     };
 
     return (
