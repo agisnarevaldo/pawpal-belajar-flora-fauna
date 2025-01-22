@@ -43,7 +43,7 @@ const flowers = [
         name: "B-U-N-G-A   R-E-U-L-L-I-A",
         image: "/flowers/reulia.svg",
         image2: "/flowers/reulia2.svg",
-        audio: "reulia",
+        audio: "reullia",
         description: "Bunga ruellia adalah bunga berwarna cerah yang biasanya berwarna ungu, merah muda, atau biru. Bunga ini tumbuh di semak-semak kecil dan sering mekar sepanjang tahun. Ruellia mudah ditemukan di taman dan sering tumbuh liar, membuat lingkungan tampak lebih indah dengan warnanya yang menarik.",
     },
     {
