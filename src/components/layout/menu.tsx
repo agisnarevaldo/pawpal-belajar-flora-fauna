@@ -9,6 +9,7 @@ type Item = {
     image: string;
     image2: string;
     description: string;
+    audio: string;
 };
 
 type MenuProps = {
